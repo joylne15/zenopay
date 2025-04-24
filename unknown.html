@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZenoPay Style Sign-In</title>
+  <link rel="stylesheet" href="unknown.css">
+  <style>
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Sign in to your account</h2>
+
+    <form id="signin-form">
+      <label>Email</label>
+      <input type="email" id="email" required />
+
+      <label>Password <a href="#" class="forgot">Forgot your password?</a></label>
+      <input type="password" id="password" required />
+
+      <div class="checkbox">
+        <input type="checkbox" id="remember" />
+        <label for="remember">Remember me on this device</label>
+      </div>
+
+      <button class="btn" type="submit">Sign in</button>
+
+      <div class="divider"><span>OR</span></div>
+
+      <div class="alt-signin">
+        <button type="button">🔵 Sign in with Google</button>
+        <button type="button">🔐 Sign in with passkey</button>
+        <button type="button">🌐 Sign in with SSO</button>
+      </div>
+    </form>
+
+    <div class="bottom-text">
+      New to ZenoPay? <a href="#">Create account</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("signin-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const remember = document.getElementById("remember").checked;
+
+      if (remember) {
+        localStorage.setItem("zenopayUser", email);
+      } else {
+        sessionStorage.setItem("zenopayUser", email);
+      }
+      window.location.href = "Unknown3.html";
+    });
+  </script>
+</body>
+</html>

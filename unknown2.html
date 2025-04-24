@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZenoPay Style Sign-Up</title>
+  <link rel="stylesheet" href="Unknown2.CSS">
+  <style>
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Create your ZenoPay account</h2>
+
+    <form id="signup-form">
+      <label>Email</label>
+      <input type="email" id="email" placeholder="you@example.com" required />
+
+      <label>Full name</label>
+      <input type="text" id="fullname" placeholder="Your full name" required />
+
+      <label>Password</label>
+      <div class="password-container">
+        <input type="password" id="password" placeholder="Create a password" required />
+        <span id="togglePassword" class="toggle-password">👁️‍🗨️</span>
+      </div>
+
+      <label>Country</label>
+      <select id="country">
+        <option selected>United States</option>
+        <option>Canada</option>
+        <option>United Kingdom</option>
+        <option>Tanzania</option>
+        <option>Kenya</option>
+        <option>Burundi</option>
+        <option>Rwanda</option>
+        <option>Congo</option>
+      </select>
+
+     
+      <p class="note">You can unsubscribe at any time. <a href="#">Privacy Policy</a></p>
+
+      <button class="btn" type="submit">Create account</button>
+
+      <div class="divider"><span>OR</span></div>
+
+      <div class="alt-signup">
+        <button type="button">🔵 Sign up with Google</button>
+        <button type="button">🔐 Sign up with passkey</button>
+        <button type="button">🌐 Sign up with SSO</button>
+      </div>
+    </form>
+
+    <div class="bottom-text">
+      Already have an account? <a href="#">Sign in</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("signup-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const fullname = document.getElementById("fullname").value;
+      const password = document.getElementById("password").value;
+      const country = document.getElementById("country").value;
+      const newsletter = document.getElementById("newsletter").checked;
+
+      const userData = {
+        email,
+        fullname,
+        password,
+        country,
+        newsletter
+      };
+      window.location.href = "unknown.html";
+    });
+
+    document.getElementById("togglePassword").addEventListener("click", function () {
+      const passwordInput = document.getElementById("password");
+      const type = passwordInput.type === "password" ? "text" : "password";
+      passwordInput.type = type;
+      this.textContent = type === "password" ? "👁️‍🗨️" : "🔒";
+    });
+  </script>
+</body>
+</html>

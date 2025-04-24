@@ -1,0 +1,109 @@
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #d32f2f;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      width: 350px;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .checkbox input {
+      margin-right: 8px;
+    }
+
+    .forgot {
+      float: right;
+      font-size: 0.9em;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #d32f2f;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-bottom: 16px;
+    }
+
+    .divider {
+      text-align: center;
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 1px;
+      background: #ccc;
+    }
+
+    .divider::before {
+      left: 0;
+    }
+
+    .divider::after {
+      right: 0;
+    }
+
+    .divider span {
+      background: white;
+      padding: 0 10px;
+    }
+
+    .alt-signin button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: white;
+      cursor: pointer;
+    }
+
+    .bottom-text {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9em;
+    }
+
+    .bottom-text a {
+      color: #d32f2f;
+      text-decoration: none;
+    }
